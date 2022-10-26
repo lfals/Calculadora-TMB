@@ -65,13 +65,51 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.input-container {
+  display: flex;
+  gap: 12px;
+}
+
+.input {
+  padding: 0 12px;
+  width: 150px;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  height: 35px;
+}
+
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
   max-width: 800px;
 }
+
+.ndc-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.button-container {
+  margin: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.button-container button {
+  padding: 12px 24px;
+  width: 140px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+
 
 .card {
   margin: 1rem;
@@ -83,6 +121,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  width: 100%;
 }
 
 .card:hover,
@@ -113,17 +152,24 @@
     width: 100%;
     flex-direction: column;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+  .card {
+    width: 100%;
   }
-  .code {
-    background: #111;
+
+
+  .ndc-container {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
-  .logo img {
-    filter: invert(1);
+
+  .input {
+    width: 100%;
+
+  }
+
+  .input-container {
+    flex-direction: column;
+    width: 100%;
   }
 }
